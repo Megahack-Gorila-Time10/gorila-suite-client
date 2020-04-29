@@ -1,68 +1,72 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Gorila Suit
 
-## Available Scripts
+> MEGA HACK – Entregável
 
-In the project directory, you can run:
 
-### `yarn start`
+## Índice
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Instalação](#instalação)
+- [Features](#features)
+- [Time](#time)
+- [FAQ](#faq)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+---
 
-### `yarn test`
+## Instalação
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+### Clone
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Clone este repositório no seu computador usando `https://github.com/Megahack-Gorila-Time10/gorila-suit-client.git`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Para começar a desenvolver...
 
-### `yarn eject`
+- certifique-se de que o ropositório está atualizado `git pull origin master`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Instale todas as dependências
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```shell
+$ yarn
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Crie um branch para desenvolver uma nova feature
+```shell
+$ git checkout -b [nome_do_branch]
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Commit e push 
+```shell
+$ git add .
+$ git commit -m "Descreva as mudanças que serão implementadas"
+$ git push origin [nome_do_branch]
+```
 
-## Learn More
+- Abra um pull request e solicite a aprovação de um dos outros contribuidores
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> vamos descrever nossa solução aqui
 
-### Code Splitting
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Time
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+| <a href="https://www.linkedin.com/in/felipebuniac/" target="_blank">**Felipe Buniac**</a> | <a href="https://www.linkedin.com/in/gzsig/" target="_blank">**Gabriel Zsigmond**</a> | <a href="https://www.linkedin.com/in/matheusdmd/" target="_blank">**Matheus Marotzke**</a> |
+| :---: |:---:| :---:|
+| [![Felipe](https://avatars0.githubusercontent.com/u/11540140?s=460&u=d9f0b50572450a5b7418f4381584b3b5c487bc4b&v=4s=100)]()    | [![Gabriel](https://avatars0.githubusercontent.com/u/45796046?s=460&u=0c756f32e5b3554fc112a7713b6421ba8e4edac0&v=4&s=100)]() | [![Matheus](https://avatars3.githubusercontent.com/u/11445689?s=460&u=15f9cb77220720df6aa502dd104283fde38715fb&v=4s=100)]()  |
+| <a href="https://github.com/febuniac" target="_blank">`https://github.com/febuniac`</a> | <a href="https://github.com/gzsig" target="_blank">`https://github.com/gzsig`</a> | <a href="https://github.com/MatheusDMD" target="_blank">`https://github.com/MatheusDMD`</a> |
 
-### Making a Progressive Web App
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## FAQ
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+---
 
-### Deployment
+## Supporte
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
