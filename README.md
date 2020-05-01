@@ -1,4 +1,4 @@
-# Gorila Suit
+# Gorila Suite
 
 > MEGA HACK – Entregável
 
@@ -17,7 +17,7 @@
 
 ### Clone
 
-- Clone este repositório no seu computador usando `https://github.com/Megahack-Gorila-Time10/gorila-suit-client.git`
+- Clone este repositório no seu computador usando `https://github.com/Megahack-Gorila-Time10/gorila-suite-client.git`
 
 ### Setup
 
