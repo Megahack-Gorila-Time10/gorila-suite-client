@@ -10,15 +10,15 @@ const FormTitle = styled.div`
   font-weight: 800;
   font-size: 39px;
   line-height: 48px;
-  margin: 8px;
+  margin: 8px 0;
   color: ${colors.darkGrey};
-`;
-
-const FormSubtitle = styled.div`
+  `;
+  
+  const FormSubtitle = styled.div`
   font-weight: 300;
   font-size: 21px;
   line-height: 26px;
-  margin: 8px;
+  margin: 0 0 8px 0;
   color: ${colors.darkGrey};
 `;
 export { FormSubtitle, FormTitle, InputGroup };

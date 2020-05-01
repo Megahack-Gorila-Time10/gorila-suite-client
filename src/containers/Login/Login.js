@@ -7,15 +7,17 @@ class Login extends Component {
     const placeholders = ["Nome", "E-mail"];
     return (
       <Fragment>
-        <G.fullPageWrapper>
-          <Header sectionTitle="Perfil" />
-          <Form
-            formTitle="Faça o teste gratuito."
-            formSubtitle="Entenda o seu perfil de investimento. "
-            inputs={numberOfInputs}
-            placeholders={placeholders}
-          />
-        </G.fullPageWrapper>
+        <Header sectionTitle="Perfil" />
+        <G.Wrapper>
+          <G.fullPageWrapper>
+            <Form
+              formTitle="Faça o teste gratuito."
+              formSubtitle="Entenda o seu perfil de investimento. "
+              inputs={numberOfInputs}
+              placeholders={placeholders}
+            />
+          </G.fullPageWrapper>
+        </G.Wrapper>
         <ColorFooter />
       </Fragment>
     );

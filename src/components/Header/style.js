@@ -9,7 +9,6 @@ const HeaderBG = styled.div`
   width: 100%;
   height: 210px;
   position: relative;
-
   color: #ffffff;
   font-family: Montserrat;
   font-style: normal;
@@ -18,8 +17,13 @@ const HeaderBG = styled.div`
   line-height: 48px;
 `;
 
-const Title = styled.div`
+const TitleWrapper = styled.div`
   padding: 32px 0 0 26px;
+  display: flex;
+`;
+
+const Title = styled.div`
+  margin-right: 12px;
 `;
 
 const Name = styled.div`
@@ -29,4 +33,4 @@ const Name = styled.div`
   text-align: center;
 `;
 
-export { HeaderBG, Name, Title };
+export { HeaderBG, Name, Title, TitleWrapper };

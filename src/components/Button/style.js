@@ -13,7 +13,7 @@ const Btn = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin: 8px;
+  margin: 8px 0;
   &:hover {
     background-image: linear-gradient(${colors.greenGradientInvert});
   }
@@ -31,7 +31,7 @@ const BtnLG = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin: 8px;
+  margin: 8px 0;
   &:hover {
     background-image: linear-gradient(${colors.greenGradientInvert});
   }
