@@ -3,8 +3,29 @@ import * as colors from "../../resources/colors";
 
 const Line = styled.div`
   height: 12px;
-  margin-top: -12px;
+  width: 100%;
   background-image: linear-gradient(${colors.greenGradient});
+  position: absolute;
+  bottom: 0px;
 `;
 
-export { Line };
+const Footer = styled.div`
+  margin-top: -100px;
+  height: 94px;
+  padding-top: 6px;
+  position: relative;
+`;
+
+const PlaceBtn = styled.div`
+  position: absolute;
+  bottom: 34px;
+  right: 40px;
+`;
+
+const PlaceLogo = styled.div`
+  position: absolute;
+  bottom: 34px;
+  left: 15px;
+`;
+
+export { Footer, Line, PlaceBtn, PlaceLogo };
