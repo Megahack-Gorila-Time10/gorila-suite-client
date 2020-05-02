@@ -11,6 +11,11 @@
 *:focus {
   outline: none;
 }
+
+a {
+  all: unset;
+}
+
 body {
   margin: 0;
   font-family: Montserrat;

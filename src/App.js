@@ -10,7 +10,7 @@ function App() {
     <SuitabilityProvider>
       <Switch>
         <Route exact path="/" component={Login} />
-        <Route path="/suitability" component={Question} />
+        <Route exact path="/suitability" component={Question} />
       </Switch>
     </SuitabilityProvider>
   );

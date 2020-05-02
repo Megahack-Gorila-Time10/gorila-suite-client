@@ -31,12 +31,13 @@ const Measurement = styled.p`
   font-size: 21px;
   line-height: 26px;
   margin: 024px;
+  text-align: center
 `;
 
 const Question = styled.div`
   color: ${colors.darkGrey};
   margin: 0 0 40px 0;
-  width: 546px;
+  max-width: 646px;
   font-weight: 800;
   font-size: 39px;
   line-height: 48px;
@@ -49,6 +50,7 @@ const RadioBtns = styled.div`
   justify-content: space-between;
   width: 546px;
   @media (max-width: 960px) {
+    width: auto;
     flex-direction: column;
     height: 400px;
   }
