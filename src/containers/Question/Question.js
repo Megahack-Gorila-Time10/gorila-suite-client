@@ -1,12 +1,19 @@
 import React, { Component, Fragment } from "react";
 import { Header, ColorFooter, LinearScale } from "../../components";
 import * as G from "../../resources/globalStyle";
+import SuitabilityContext from "../../context/SuitabilityContext";
 
 class Question extends Component {
+  componentDidMount = () => {
+    if (this.context.state.name == "") {
+      this.context.goHome();
+    }
+  };
+
   render() {
     return (
       <Fragment>
-        <Header sectionTitle="Perfil" name="Gabriel" />
+        <Header sectionTitle="Perfil" name={this.context.state.name} />
         <G.Wrapper>
           <G.FullPageWrapper>
             <LinearScale />
@@ -17,4 +24,7 @@ class Question extends Component {
     );
   }
 }
+
+Question.contextType = SuitabilityContext;
+
 export default Question;
