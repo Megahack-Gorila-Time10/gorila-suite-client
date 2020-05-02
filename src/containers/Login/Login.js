@@ -5,6 +5,7 @@ class Login extends Component {
   render() {
     const numberOfInputs = 2;
     const placeholders = ["Nome", "E-mail"];
+    const names = ["name", "email"];
     return (
       <Fragment>
         <Header sectionTitle="Perfil" />
@@ -15,6 +16,7 @@ class Login extends Component {
               formSubtitle="Entenda o seu perfil de investimento. "
               inputs={numberOfInputs}
               placeholders={placeholders}
+              names={names}
             />
           </G.FullPageWrapper>
         </G.Wrapper>

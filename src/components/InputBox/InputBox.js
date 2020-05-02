@@ -5,7 +5,11 @@ class InputBox extends Component {
   render() {
     return (
       <Fragment>
-        <Input placeholder={this.props.placeholder}/>
+        <Input
+          placeholder={this.props.placeholder}
+          name={this.props.name}
+          onChange={this.props.handleInput}
+        />
       </Fragment>
     );
   }
