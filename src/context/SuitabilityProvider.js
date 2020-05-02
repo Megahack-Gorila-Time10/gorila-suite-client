@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import AppContext from "./AppContext";
+import SuitabilityContext from "./SuitabilityContext";
 
-class AppProvider extends Component {
+class SuitabilityProvider extends Component {
   state = {
     currentSelect: 3,
     allRes: [],
@@ -27,11 +27,11 @@ class AppProvider extends Component {
     console.log(context.state);
 
     return (
-      <AppContext.Provider value={context}>
+      <SuitabilityContext.Provider value={context}>
         {this.props.children}
-      </AppContext.Provider>
+      </SuitabilityContext.Provider>
     );
   }
 }
 
-export default AppProvider;
+export default SuitabilityProvider;

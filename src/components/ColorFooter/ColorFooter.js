@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Logo from "../Logo";
 import Button from "../Button";
 import * as S from "./Style";
-import AppContext from "../../context/AppContext";
+import SuitabilityContext from "../../context/SuitabilityContext";
 
 class ColorFooter extends Component {
   render() {
@@ -26,6 +26,6 @@ class ColorFooter extends Component {
   }
 }
 
-ColorFooter.contextType = AppContext;
+ColorFooter.contextType = SuitabilityContext;
 
 export default ColorFooter;

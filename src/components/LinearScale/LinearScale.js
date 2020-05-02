@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import RadioButton from "../RadioButton/RadioButton";
 import * as S from "./style";
-import AppContext from "../../context/AppContext";
+import SuitabilityContext from "../../context/SuitabilityContext";
 
 class LinearScale extends Component {
   state = {
@@ -70,6 +70,6 @@ class LinearScale extends Component {
   }
 }
 
-LinearScale.contextType = AppContext;
+LinearScale.contextType = SuitabilityContext;
 
 export default LinearScale;
