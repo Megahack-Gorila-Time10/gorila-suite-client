@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const fullPageWrapper = styled.div`
-  min-height: calc(100vh - 210px);
+const FullPageWrapper = styled.div`
+  min-height: calc(100vh - 310px);
 `;
 
 const Wrapper = styled.div`
@@ -23,4 +23,4 @@ const Wrapper = styled.div`
   }
 `;
 
-export { fullPageWrapper, Wrapper };
+export { FullPageWrapper, Wrapper };

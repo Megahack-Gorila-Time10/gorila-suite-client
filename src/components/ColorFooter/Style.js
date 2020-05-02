@@ -10,7 +10,6 @@ const Line = styled.div`
 `;
 
 const Footer = styled.div`
-  margin-top: -100px;
   height: 94px;
   padding-top: 6px;
   position: relative;
