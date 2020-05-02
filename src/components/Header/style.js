@@ -28,7 +28,7 @@ const Title = styled.div`
 
 const Name = styled.div`
   position: absolute;
-  top: 45px;
+  top: 34px;
   right: 40px;
   text-align: center;
 `;

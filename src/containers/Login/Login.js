@@ -9,14 +9,14 @@ class Login extends Component {
       <Fragment>
         <Header sectionTitle="Perfil" />
         <G.Wrapper>
-          <G.fullPageWrapper>
+          <G.FullPageWrapper>
             <Form
               formTitle="Faça o teste gratuito."
               formSubtitle="Entenda o seu perfil de investimento. "
               inputs={numberOfInputs}
               placeholders={placeholders}
             />
-          </G.fullPageWrapper>
+          </G.FullPageWrapper>
         </G.Wrapper>
         <ColorFooter />
       </Fragment>
