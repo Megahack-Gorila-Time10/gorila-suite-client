@@ -2,9 +2,118 @@ import React, { Component } from "react";
 import SuitabilityContext from "./SuitabilityContext";
 
 class SuitabilityProvider extends Component {
-  state = {
-    currentSelect: 3,
-    allRes: [],
+  constructor(props) {
+    super(props);
+    this.index = 0;
+    this.questions = [
+      {
+        step: "1",
+        denominator: "2",
+        scaleLow: "Entediante",
+        scaleHight: "Prazerosa",
+        category: "Monitoramento",
+        question:
+          "Quando se trata de gerenciar seus investimento, você acha isso uma tarefa:",
+      },
+      {
+        step: "2",
+        denominator: "2",
+        scaleLow: "Esqueço até que tinha investido",
+        scaleHight: "Verifico freneticamente para ver se mudou",
+        category: "Monitoramento",
+        question:
+          "Imagine que você tem acesso aos retornos dos investimentos no celular:",
+      },
+      {
+        step: "1",
+        denominator: "3",
+        scaleLow: "Não sei nem por onde começar",
+        scaleHight: "Sei bem o que eu quero",
+        category: "Conhecimento",
+        question:
+          "Qual seu nível de confiança ao escolher ativos financeiros sozinho?",
+      },
+      {
+        step: "2",
+        denominator: "3",
+        scaleLow: "Não entendo nada",
+        scaleHight: "Entendo tudo sobre investimentos",
+        category: "Conhecimento",
+        question:
+          "Como você classificaria seu nível de conhecimento sobre investimentos?",
+      },
+      {
+        step: "3",
+        denominator: "3",
+        scaleLow: "Não possuo investimentos financeiros",
+        scaleHight: "Invisto boa parte do meu patrimônio",
+        category: "Conhecimento",
+        question: "Sobre seus investimentos atuais:",
+      },
+      {
+        step: "1",
+        denominator: "2",
+        scaleLow: "Querendo resgatar na hora",
+        scaleHight: "Aproveito a queda para investir mais",
+        category: "Reação a imprevistos",
+        question:
+          "Imagine que você fez um investimento há 1 mês e vê que seus rendimentos estão negativos. Qual a sua reação",
+      },
+      {
+        step: "2",
+        denominator: "2",
+        scaleLow: "Impossível! Preciso acessar esse dinheiro na hora",
+        scaleHight: "Sem problemas! Esse dinheiro é só para investir",
+        category: "Reação a imprevistos",
+        question:
+          "Se decidisse retirar o dinheiro do investimento e tivesse que esperar 30 dias úteis:",
+      },
+      {
+        step: "1",
+        denominator: "2",
+        scaleLow: "Querendo resgatar na hora",
+        scaleHight: "Aproveito a queda para investir mais",
+        category: "Expectativas",
+        question:
+          "Imagine que você fez um investimento há 1 mês e vê que seus rendimentos estão negativos. Qual a sua reação?",
+      },
+      {
+        step: "2",
+        denominator: "2",
+        scaleLow: "Menores retornos - Menores chances de perda",
+        scaleHight: "Maiores retornos - Maiores chances de perda",
+        category: "Expectativas",
+        question: "Em um possível novo investimento você procura:",
+      },
+      {
+        step: "1",
+        denominator: "1",
+        scaleLow: "Não possuo investimentos financeiros",
+        scaleHight: "Invisto boa parte do meu patrimônio",
+        category: "Liquides",
+        question: "Sobre seus investimentos atuais:",
+      },
+      {
+        step: "1",
+        denominator: "1",
+        scaleLow: "O mais rápido o possível        ",
+        scaleHight: "Não tenho problemas em esperar        ",
+        category: "visão de longo prazo",
+        question:
+          "Quero ver retornos significativos de um novo investimento financeiro:",
+      },
+    ];
+    this.state = {
+      name: "Gabriel",
+      email: "",
+      currentSelect: 3,
+      currentQuestion: this.questions[this.index],
+      allRes: [],
+    };
+  }
+
+  goHome = () => {
+    window.location.href = "/";
   };
 
   setCurrent = (value) => {
@@ -12,10 +121,20 @@ class SuitabilityProvider extends Component {
   };
 
   handleNextQuestion = () => {
-    let newAllRes = this.state.allRes;
-    newAllRes.push(this.currentSelect);
-    this.setState({ allRes: newAllRes });
-    console.log("funfa");
+    if (this.index < this.questions.length - 1) {
+      let newAllRes = this.state.allRes;
+      newAllRes.push(parseInt(this.state.currentSelect));
+      this.index++;
+      this.setState({
+        allRes: newAllRes,
+        currentQuestion: this.questions[this.index],
+        currentSelect: 3,
+      });
+    }
+  };
+
+  handleInput = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   render() {
@@ -23,6 +142,8 @@ class SuitabilityProvider extends Component {
       state: this.state,
       handleNextQuestion: this.handleNextQuestion,
       setCurrent: this.setCurrent,
+      handleInput: this.handleInput,
+      goHome: this.goHome,
     };
     console.log(context.state);
 
