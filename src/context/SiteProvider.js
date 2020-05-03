@@ -5,8 +5,8 @@ class SiteProvider extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      email: "",
+      name: "Gabriel",
+      email: "g",
     };
   }
 
