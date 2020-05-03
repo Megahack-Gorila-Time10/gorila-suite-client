@@ -13,10 +13,12 @@ import TextArea from "./TextArea";
 import DepoimentCard from "./DepoimentCard";
 import Navbar from "./Navbar";
 import StartNow from "./StartNow";
+import CurvedBanner from "./CurvedBanner";
 
 export {
   Button,
   Card,
+  CurvedBanner,
   ColorFooter,
   Form,
   Header,
