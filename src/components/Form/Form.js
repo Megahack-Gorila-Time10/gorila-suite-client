@@ -4,9 +4,26 @@ import Button from "../Button";
 import * as S from "./style";
 
 class Form extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: false
+    };
+  }
   formValidate = () => {
-    if (this.props.currentName != "" && this.props.currentEmail != "") {
+    let allFilled = true;
+    this.props.currentValues.forEach(element => {
+      if (element === ""){
+        allFilled = false;
+      }
+    });
+
+    if (allFilled){
+      this.setState({error:false});
       this.props.router.history.push(this.props.nextPath);
+
+    } else {
+      this.setState({error:true});
     }
   };
 
@@ -18,7 +35,9 @@ class Form extends Component {
           key={i}
           placeholder={this.props.placeholders[i]}
           name={this.props.names[i]}
+          value={this.props.currentValues[i]}
           handleInput={this.props.handleInput}
+          error={this.state.error}
         />
       );
     }

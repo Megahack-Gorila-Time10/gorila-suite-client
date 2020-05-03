@@ -42,6 +42,7 @@ class Onboarding extends Component {
                       placeholder={this.context.state.currentTitle[3]}
                       name={this.context.state.currentTitle[4]}
                       handleInput={this.context.handleInput}
+                      error={this.context.state.error}
                     />
                   )}
                   {this.context.state.currentTitle.length > 5 && (
@@ -49,6 +50,7 @@ class Onboarding extends Component {
                       placeholder={this.context.state.currentTitle[5]}
                       name={this.context.state.currentTitle[6]}
                       handleInput={this.context.handleInput}
+                      error={this.context.state.error}
                     />
                   )}
                 </Fragment>

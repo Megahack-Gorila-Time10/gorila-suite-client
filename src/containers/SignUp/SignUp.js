@@ -24,8 +24,7 @@ class SignUp extends Component {
                   placeholders={placeholders}
                   names={names}
                   router={this.props}
-                  currentName={this.context.state.name}
-                  currentEmail={this.context.state.email}
+                  currentValues={[this.context.state.name,this.context.state.email]}
                   handleInput={this.context.handleInput}
                   nextPath="/sites/onboarding"
                 />
