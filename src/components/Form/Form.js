@@ -1,11 +1,17 @@
 import React, { Component, Fragment } from "react";
 import SuitabilityContext from "../../context/SuitabilityContext";
-import { Link } from "react-router-dom";
 import InputBox from "../InputBox";
 import Button from "../Button";
+import history from "../../resources/history";
 import * as S from "./style";
 
 class Form extends Component {
+  formValidate = () => {
+    if (this.context.state.name != "" && this.context.state.email != "") {
+      history.push("/suitability");
+    }
+  };
+
   render() {
     const inputs = [];
     for (let i = 0; i < this.props.inputs; i++) {
@@ -24,9 +30,7 @@ class Form extends Component {
         <S.FormSubtitle>{this.props.formSubtitle}</S.FormSubtitle>
         <S.FormTitle>{this.props.formTitle}</S.FormTitle>
         <S.InputGroup>{inputs}</S.InputGroup>
-        <Link to="/suitability">
-          <Button text="Começe já" />
-        </Link>
+        <Button text="Começe já" handleClick={this.formValidate} />
       </Fragment>
     );
   }
