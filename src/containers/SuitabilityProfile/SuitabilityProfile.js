@@ -21,7 +21,7 @@ class SuitabilityProfile extends Component {
         <Header sectionTitle="Perfil" name={this.context.state.name} />
         <G.Wrapper>
           <G.FullPageWrapper>
-          {this.context.state.profileResult === "" ?  (
+          {Object.values(this.context.state.profileResult).length === 0 ?  (
             <Loader
                 type="Puff"
                 color="#4CDE93"
