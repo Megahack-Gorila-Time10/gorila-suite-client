@@ -26,7 +26,7 @@ class Onboarding extends Component {
           <G.FullPageWrapper>
             <Fraction
               step={this.context.state.currentTitle[0]}
-              denominator="4"
+              denominator="5"
               category="Setup do site"
             />
             <OnBoardingTitle text={this.context.state.currentTitle[1]} />
@@ -51,6 +51,7 @@ class Onboarding extends Component {
                       handleInput={this.context.handleInput}
                     />
                   )}
+                  {this.context.index === 4 && <p>{window.location.origin}/sites/{this.context.state.username}</p>}
                 </Fragment>
               )}
             </S.Content>

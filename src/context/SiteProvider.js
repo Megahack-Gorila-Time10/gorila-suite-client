@@ -29,17 +29,24 @@ class SiteProvider extends Component {
         "Descrição",
         "achievements",
       ],
-      [4, "Informações de contato", "Salvar", "Celular", "phone"],
-      // [5, "Escolha a paleta de cores do site", "Salvar"],
+      [4, "Informações de contato", "Póximo", "Celular", "phone"],
+      [
+        5,
+        "Crie um Username para seus clientes te encontrarem com facilidade",
+        "Salvar",
+        "Username",
+        "username",
+      ],
     ];
     this.state = {
-      name: "",
-      email: "",
-      ["job-title"]: "",
-      role: "",
-      ["professional-experience"]: "",
-      achievements: "",
-      phone: "",
+      name: "g",
+      email: "g",
+      username: "",
+      ["job-title"]: "g",
+      role: "g",
+      ["professional-experience"]: "g",
+      achievements: "g",
+      phone: "9",
       currentTitle: this.titles[this.index],
     };
   }

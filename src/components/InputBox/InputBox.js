@@ -9,6 +9,7 @@ class InputBox extends Component {
           placeholder={this.props.placeholder}
           name={this.props.name}
           onChange={this.props.handleInput}
+          autoComplete="off"
         />
       </Fragment>
     );
