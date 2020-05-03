@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from "react";
 import { Header, Form, ColorFooter } from "../../components";
 import * as G from "../../resources/globalStyle";
+import * as S from "./style";
+
 class FreeQuiz extends Component {
   render() {
     const numberOfInputs = 2;
@@ -11,14 +13,19 @@ class FreeQuiz extends Component {
         <Header sectionTitle="Perfil" />
         <G.Wrapper>
           <G.FullPageWrapper>
-            <Form
-              formTitle="Faça o teste gratuito."
-              formSubtitle="Entenda o seu perfil de investimento. "
-              inputs={numberOfInputs}
-              placeholders={placeholders}
-              names={names}
-              router={this.props}
-            />
+            <S.Content>
+              <div>
+                <Form
+                  formTitle="Faça o teste gratuito."
+                  formSubtitle="Entenda o seu perfil de investimento. "
+                  inputs={numberOfInputs}
+                  placeholders={placeholders}
+                  names={names}
+                  router={this.props}
+                />
+              </div>
+              <S.Illustration />
+            </S.Content>
           </G.FullPageWrapper>
         </G.Wrapper>
         <ColorFooter />

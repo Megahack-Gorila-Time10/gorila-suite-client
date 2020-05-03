@@ -3,7 +3,13 @@ import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import SuitabilityProvider from "./context/SuitabilityProvider";
 
-import { FreeQuiz, Question, SuitabilityProfile, Home } from "./containers";
+import {
+  FreeQuiz,
+  Question,
+  SuitabilityProfile,
+  Home,
+  SignUp,
+} from "./containers";
 
 function App() {
   return (
@@ -17,6 +23,7 @@ function App() {
           path="/perfil/suitability/meu-perfil"
           component={SuitabilityProfile}
         />
+        <Route exact path="/sites" component={SignUp} />
       </Switch>
     </SuitabilityProvider>
   );
