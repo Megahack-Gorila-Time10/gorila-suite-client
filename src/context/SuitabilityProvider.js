@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SuitabilityContext from "./SuitabilityContext";
+import history from "../resources/history";
 import server from "../resources/axios";
 import { ML_PROFILE_URL } from "../resources/constants";
 
@@ -10,103 +11,95 @@ class SuitabilityProvider extends Component {
     this.questions = [
       {
         step: "1",
-        denominator: "2",
+        denominator: "10",
         scaleLow: "Entediante",
         scaleHight: "Prazerosa",
-        category: "Monitoramento",
+        category: "Acompanhamento",
         question:
           "Quando se trata de gerenciar seus investimento, você acha isso uma tarefa:",
       },
       {
         step: "2",
-        denominator: "2",
+        denominator: "10",
         scaleLow: "Esqueço até que tinha investido",
         scaleHight: "Verifico freneticamente para ver se mudou",
-        category: "Monitoramento",
+        category: "Acompanhamento",
         question:
           "Imagine que você tem acesso aos retornos dos investimentos no celular:",
       },
       {
-        step: "1",
-        denominator: "3",
+        step: "3",
+        denominator: "10",
         scaleLow: "Não sei nem por onde começar",
         scaleHight: "Sei bem o que eu quero",
-        category: "Conhecimento",
+        category: "Profundidade de conhecimentos",
         question:
           "Qual seu nível de confiança ao escolher ativos financeiros sozinho?",
       },
       {
-        step: "2",
-        denominator: "3",
+        step: "4",
+        denominator: "10",
         scaleLow: "Não entendo nada",
         scaleHight: "Entendo tudo sobre investimentos",
-        category: "Conhecimento",
+        category: "Profundidade de conhecimentos",
         question:
           "Como você classificaria seu nível de conhecimento sobre investimentos?",
       },
       {
-        step: "3",
-        denominator: "3",
+        step: "5",
+        denominator: "10",
         scaleLow: "Não possuo investimentos financeiros",
         scaleHight: "Invisto boa parte do meu patrimônio",
-        category: "Conhecimento",
+        category: "Profundidade de conhecimentos",
         question: "Sobre seus investimentos atuais:",
       },
       {
-        step: "1",
-        denominator: "2",
+        step: "6",
+        denominator: "10",
         scaleLow: "Querendo resgatar na hora",
         scaleHight: "Aproveito a queda para investir mais",
         category: "Reação a imprevistos",
-        question:
-          "Imagine que você fez um investimento há 1 mês e vê que seus rendimentos estão negativos. Qual a sua reação",
-      },
-      {
-        step: "2",
-        denominator: "2",
-        scaleLow: "Impossível! Preciso acessar esse dinheiro na hora",
-        scaleHight: "Sem problemas! Esse dinheiro é só para investir",
-        category: "Reação a imprevistos",
-        question:
-          "Se decidisse retirar o dinheiro do investimento e tivesse que esperar 30 dias úteis:",
-      },
-      {
-        step: "1",
-        denominator: "2",
-        scaleLow: "Querendo resgatar na hora",
-        scaleHight: "Aproveito a queda para investir mais",
-        category: "Expectativas",
         question:
           "Imagine que você fez um investimento há 1 mês e vê que seus rendimentos estão negativos. Qual a sua reação?",
       },
       {
-        step: "2",
-        denominator: "2",
+        step: "7",
+        denominator: "10",
         scaleLow: "Menores retornos - Menores chances de perda",
         scaleHight: "Maiores retornos - Maiores chances de perda",
-        category: "Expectativas",
+        category: "Expectativa de retorno",
         question: "Em um possível novo investimento você procura:",
       },
       {
-        step: "1",
-        denominator: "1",
-        scaleLow: "Não possuo investimentos financeiros",
-        scaleHight: "Invisto boa parte do meu patrimônio",
-        category: "Liquides",
-        question: "Sobre seus investimentos atuais:",
+        step: "8",
+        denominator: "10",
+        scaleLow: "Impossível! Preciso acessar esse dinheiro na hora",
+        scaleHight: "Sem problemas! Esse dinheiro é só para investir",
+        category: "Necessidade de liquidez",
+        question:
+          "Se decidisse retirar o dinheiro do investimento e tivesse que esperar 30 dias úteis:",
       },
       {
-        step: "1",
-        denominator: "1",
-        scaleLow: "O mais rápido o possível        ",
-        scaleHight: "Não tenho problemas em esperar        ",
-        category: "visão de longo prazo",
+        step: "9",
+        denominator: "10",
+        scaleLow: "5%",
+        scaleHight: "95%",
+        category: "Expectativa de retorno",
+        question:
+          "Qual porcentagem (%) do seu patrimônio total está disponível para investimentos financeiros? ",
+      },
+      {
+        step: "10",
+        denominator: "10",
+        scaleLow: "O mais rápido o possível",
+        scaleHight: "Não tenho problemas em esperar",
+        category: "Visão de longo prazo",
         question:
           "Quero ver retornos significativos de um novo investimento financeiro:",
       },
     ];
     this.state = {
-      name: "Gabriel",
+      name: "",
       email: "",
       currentSelect: 3,
       currentQuestion: this.questions[this.index],
