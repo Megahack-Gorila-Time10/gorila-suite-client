@@ -7,9 +7,11 @@ import Logo from "./Logo";
 import RadioButton from "./RadioButton";
 import LinearScale from "./LinearScale";
 import SuitabilityType from "./SuitabilityType";
+import Card from "./Card";
 
 export {
   Button,
+  Card,
   ColorFooter,
   Form,
   Header,
