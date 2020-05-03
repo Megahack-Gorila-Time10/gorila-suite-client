@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
-import { ColorFooter } from "../../components";
+import { ColorFooter, Navbar } from "../../components";
+import SiteContext from "../../context/SiteContext";
 import * as G from "../../resources/globalStyle";
 import * as S from "./style";
 
@@ -11,8 +12,14 @@ class MySite extends Component {
     this.infos = ["title1", "title2", "title3"];
   }
   render() {
-    return <Fragment></Fragment>;
+    return (
+      <Fragment>
+        <Navbar name={this.context.state.name}/>
+      </Fragment>
+    );
   }
 }
+
+MySite.contextType = SiteContext
 
 export default MySite;

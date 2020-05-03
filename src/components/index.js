@@ -11,6 +11,7 @@ import Card from "./Card";
 import OnBoardingTitle from "./OnBoardingTitle";
 import TextArea from "./TextArea";
 import DepoimentCard from "./DepoimentCard";
+import Navbar from "./Navbar";
 
 export {
   Button,
@@ -26,4 +27,5 @@ export {
   SuitabilityType,
   TextArea,
   DepoimentCard,
+  Navbar,
 };
