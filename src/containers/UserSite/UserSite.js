@@ -4,7 +4,12 @@ import * as G from "../../resources/globalStyle";
 import * as S from "./style";
 
 class UserSite extends Component {
-  state = {};
+  constructor(props){
+    super(props)
+    this.state ={}
+    this.titles=["title1","title2","title3"]
+    this.infos=["title1","title2","title3"]
+  }
   render() {
     return (
       <Fragment>
@@ -19,7 +24,10 @@ class UserSite extends Component {
           <G.FullPageWrapper>
           </G.FullPageWrapper>
         </G.Wrapper>
-        <CrossCurve/>
+        <CrossCurve
+        title = {this.titles}
+        info = {this.infos}
+        />
 
       
         <ColorFooter />

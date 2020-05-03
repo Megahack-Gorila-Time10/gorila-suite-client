@@ -4,7 +4,7 @@ import * as colors from "../../resources/colors";
 const HeaderBG = styled.div`
   background-image: url(/img/svg/crossbay.svg);
   width: 100%;
-  height: 990px;
+  height: 1554px;
   position: relative;
   color: #ffffff;
   font-family: Montserrat;

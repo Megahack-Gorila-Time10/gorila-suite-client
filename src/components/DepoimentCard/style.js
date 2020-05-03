@@ -5,8 +5,8 @@ const CardWrapper = styled.div`
   background: #ffffff;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  width: 360px;
-  height: 428px;
+  width: 350px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -28,8 +28,8 @@ const Info = styled.div`
 `;
 
 const Title = styled.div`
-  font-weight: 800;
-  font-size: 39px;
+  font-weight: 300;
+  font-size: 20px;
   line-height: 48px;
   color: ${colors.darkGrey};
 `;

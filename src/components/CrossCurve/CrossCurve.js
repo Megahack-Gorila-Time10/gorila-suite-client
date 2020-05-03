@@ -15,19 +15,16 @@ class CrossCurve extends Component {
         <S.CardWrapper>
           <S.Cards>
               <DepoimentCard
-                title="-Matheus"
-                info="Lorem Ipsum"
-                router={this.props}
+                title={this.props.title[0]}
+                info={this.props.info[0]}
               />
               <DepoimentCard
-                title="-Buniac"
-                info="Lorem Ipsum"
-                router={this.props}
+                title={this.props.title[1]}
+                info={this.props.info[1]}
               />
               <DepoimentCard
-                title="-Gabe"
-                info="Lorem Ipsum"
-                router={this.props}
+                title={this.props.title[2]}
+                info={this.props.info[2]}
               />
             </S.Cards>
           </S.CardWrapper>
