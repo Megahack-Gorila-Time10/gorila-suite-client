@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/gorila-suite-client/static/css/main.34a19829.chunk.css",
-    "main.js": "/gorila-suite-client/static/js/main.c510930d.chunk.js",
-    "main.js.map": "/gorila-suite-client/static/js/main.c510930d.chunk.js.map",
+    "main.js": "/gorila-suite-client/static/js/main.5c70d220.chunk.js",
+    "main.js.map": "/gorila-suite-client/static/js/main.5c70d220.chunk.js.map",
     "runtime-main.js": "/gorila-suite-client/static/js/runtime-main.0a064c95.js",
     "runtime-main.js.map": "/gorila-suite-client/static/js/runtime-main.0a064c95.js.map",
     "static/js/2.b3ae4fee.chunk.js": "/gorila-suite-client/static/js/2.b3ae4fee.chunk.js",
     "static/js/2.b3ae4fee.chunk.js.map": "/gorila-suite-client/static/js/2.b3ae4fee.chunk.js.map",
     "index.html": "/gorila-suite-client/index.html",
-    "precache-manifest.6896c0610beef2b34c62ef7db4cbd5b5.js": "/gorila-suite-client/precache-manifest.6896c0610beef2b34c62ef7db4cbd5b5.js",
+    "precache-manifest.b389249c78b6a99542ff68b3e6b0d7ab.js": "/gorila-suite-client/precache-manifest.b389249c78b6a99542ff68b3e6b0d7ab.js",
     "service-worker.js": "/gorila-suite-client/service-worker.js",
     "static/css/main.34a19829.chunk.css.map": "/gorila-suite-client/static/css/main.34a19829.chunk.css.map",
     "static/js/2.b3ae4fee.chunk.js.LICENSE.txt": "/gorila-suite-client/static/js/2.b3ae4fee.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0a064c95.js",
     "static/js/2.b3ae4fee.chunk.js",
     "static/css/main.34a19829.chunk.css",
-    "static/js/main.c510930d.chunk.js"
+    "static/js/main.5c70d220.chunk.js"
   ]
 }
