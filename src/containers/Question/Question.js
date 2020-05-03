@@ -23,7 +23,10 @@ class Question extends Component {
             <LinearScale />
           </G.FullPageWrapper>
         </G.Wrapper>
-        <ColorFooter btnText="Próxima" />
+        <ColorFooter
+          btnText="Próxima"
+          handleNextQuestion={this.context.handleNextQuestion}
+        />
       </Fragment>
     );
   }

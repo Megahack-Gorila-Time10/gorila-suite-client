@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Logo from "../Logo";
 import Button from "../Button";
 import * as S from "./Style";
-import SuitabilityContext from "../../context/SuitabilityContext";
+
 
 class ColorFooter extends Component {
   render() {
@@ -16,7 +16,7 @@ class ColorFooter extends Component {
             <Button
               lg
               text={this.props.btnText}
-              handleClick={this.context.handleNextQuestion}
+              handleClick={this.props.handleNextQuestion}
             />
           </S.PlaceBtn>
         ) : null}
@@ -26,6 +26,6 @@ class ColorFooter extends Component {
   }
 }
 
-ColorFooter.contextType = SuitabilityContext;
+
 
 export default ColorFooter;
