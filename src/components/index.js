@@ -8,6 +8,8 @@ import RadioButton from "./RadioButton";
 import LinearScale from "./LinearScale";
 import SuitabilityType from "./SuitabilityType";
 import Card from "./Card";
+import OnBoardingTitle from "./OnBoardingTitle";
+import TextArea from "./TextArea";
 
 export {
   Button,
@@ -18,6 +20,8 @@ export {
   InputBox,
   LinearScale,
   Logo,
+  OnBoardingTitle,
   RadioButton,
   SuitabilityType,
+  TextArea,
 };
