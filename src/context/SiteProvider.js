@@ -4,9 +4,43 @@ import SiteContext from "./SiteContext";
 class SiteProvider extends Component {
   constructor(props) {
     super(props);
+    this.index = 0;
+    this.titles = [
+      [
+        1,
+        "Preencha as informação principais com seu LinkedIn",
+        "Preencher manualmente",
+      ],
+      [
+        2,
+        "Informação individuais",
+        "Próximo",
+        "Cargo",
+        "job-title",
+        "Descrição",
+        "role",
+      ],
+      [
+        3,
+        "Descreva sua experiência profissional",
+        "Próximo",
+        "Título",
+        "professional-experience",
+        "Descrição",
+        "achievements",
+      ],
+      [4, "Informações de contato", "Salvar", "Celular", "phone"],
+      // [5, "Escolha a paleta de cores do site", "Salvar"],
+    ];
     this.state = {
       name: "Gabriel",
       email: "g",
+      ["job-title"]: "",
+      role: "",
+      ["professional-experience"]: "",
+      achievements: "",
+      phone: "",
+      currentTitle: this.titles[this.index],
     };
   }
 
@@ -18,11 +52,59 @@ class SiteProvider extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+  validInputs = () => {
+    switch (this.index) {
+      case 0:
+        return true;
+      case 1:
+        if (this.state["job-title"] !== "" && this.state.role !== "") {
+          return true;
+        } else {
+          return false;
+        }
+      case 2:
+        if (
+          this.state["professional-experience"] !== "" &&
+          this.state.achievements !== ""
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      case 3:
+        if (this.state.phone !== "") {
+          return true;
+        } else {
+          return false;
+        }
+
+      default:
+        break;
+    }
+  };
+
+  handleNextQuestion = () => {
+    if (this.index < this.titles.length - 1 && this.validInputs()) {
+      this.index++;
+      this.setState({
+        currentTitle: this.titles[this.index],
+      });
+      if (document.getElementsByTagName("input").length) {
+        document.getElementsByTagName("input")[0].value = "";
+      }
+      if (document.getElementsByTagName("textarea").length) {
+        document.getElementsByTagName("textarea")[0].value = "";
+      }
+    }
+  };
+
   render() {
     const context = {
       state: this.state,
+      index: this.index,
       handleInput: this.handleInput,
       goHome: this.goHome,
+      handleNextQuestion: this.handleNextQuestion,
     };
 
     console.log(context.state);

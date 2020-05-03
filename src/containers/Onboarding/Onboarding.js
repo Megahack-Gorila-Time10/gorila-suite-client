@@ -1,8 +1,14 @@
 import React, { Component, Fragment } from "react";
-import { Header, ColorFooter } from "../../components";
+import {
+  Header,
+  ColorFooter,
+  OnBoardingTitle,
+  TextArea,
+  InputBox,
+} from "../../components";
 import * as G from "../../resources/globalStyle";
+import * as S from "./style";
 import SiteContext from "../../context/SiteContext";
-import { Redirect } from "react-router-dom";
 import Fraction from "../../components/Fraction/Fraction";
 
 class Onboarding extends Component {
@@ -11,16 +17,49 @@ class Onboarding extends Component {
       this.context.goHome();
     }
   };
+
   render() {
     return (
       <Fragment>
         <Header sectionTitle="Sites" name={this.context.state.name} />
         <G.Wrapper>
           <G.FullPageWrapper>
-            <Fraction step="1" denominator="6" category="Setup do site" />
+            <Fraction
+              step={this.context.state.currentTitle[0]}
+              denominator="4"
+              category="Setup do site"
+            />
+            <OnBoardingTitle text={this.context.state.currentTitle[1]} />
+            <S.Content>
+              {this.context.index == 0 ? (
+                <Fragment>
+                  <S.LinkedInLogo /> <S.Text>Em breve</S.Text>
+                </Fragment>
+              ) : (
+                <Fragment>
+                  {this.context.state.currentTitle.length > 3 && (
+                    <InputBox
+                      placeholder={this.context.state.currentTitle[3]}
+                      name={this.context.state.currentTitle[4]}
+                      handleInput={this.context.handleInput}
+                    />
+                  )}
+                  {this.context.state.currentTitle.length > 5 && (
+                    <TextArea
+                      placeholder={this.context.state.currentTitle[5]}
+                      name={this.context.state.currentTitle[6]}
+                      handleInput={this.context.handleInput}
+                    />
+                  )}
+                </Fragment>
+              )}
+            </S.Content>
           </G.FullPageWrapper>
         </G.Wrapper>
-        <ColorFooter btnText="Próxima" />
+        <ColorFooter
+          btnText={this.context.state.currentTitle[2]}
+          handleNextQuestion={this.context.handleNextQuestion}
+        />
       </Fragment>
     );
   }
