@@ -105,6 +105,7 @@ class SuitabilityProvider extends Component {
       currentQuestion: this.questions[this.index],
       allRes: [],
       profileResult: {},
+      redirect: null,
     };
   }
 
@@ -140,8 +141,8 @@ class SuitabilityProvider extends Component {
           const { description, title } = res.data;
           this.setState({
             profileResult: { description, title },
+            redirect: "/perfil/suitability/meu-perfil",
           });
-          history.push("/suitability/perfil");
         })
         .catch((err) => {
           console.log(err);
@@ -154,10 +155,6 @@ class SuitabilityProvider extends Component {
   };
 
   render() {
-    if (window.location.pathname !== "/" && this.state.name === "") {
-      this.goHome();
-    }
-
     const context = {
       state: this.state,
       handleNextQuestion: this.handleNextQuestion,
@@ -165,6 +162,7 @@ class SuitabilityProvider extends Component {
       handleInput: this.handleInput,
       goHome: this.goHome,
     };
+
     console.log(context.state);
 
     return (

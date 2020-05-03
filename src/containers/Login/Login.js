@@ -17,6 +17,7 @@ class Login extends Component {
               inputs={numberOfInputs}
               placeholders={placeholders}
               names={names}
+              router={this.props}
             />
           </G.FullPageWrapper>
         </G.Wrapper>
