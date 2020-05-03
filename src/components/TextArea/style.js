@@ -15,4 +15,18 @@ const Input = styled.textarea`
   margin: 8px 0;
 `;
 
-export { Input };
+const InputError = styled.textarea`
+  border: 1px solid ${colors.softRed};
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 500px;
+  height: 180px;
+  font-size: 21px;
+  line-height: 26px;
+  color: ${colors.darkGrey};
+  font-family: Montserrat;
+  font-weight: 300;
+  margin: 8px 0;
+`;
+
+export { Input, InputError };

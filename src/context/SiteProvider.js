@@ -41,6 +41,7 @@ class SiteProvider extends Component {
       achievements: "",
       phone: "",
       currentTitle: this.titles[this.index],
+      error: false,
     };
   }
 
@@ -87,6 +88,7 @@ class SiteProvider extends Component {
     if (this.index < this.titles.length - 1 && this.validInputs()) {
       this.index++;
       this.setState({
+        error: false,
         currentTitle: this.titles[this.index],
       });
       if (document.getElementsByTagName("input").length) {
@@ -95,6 +97,10 @@ class SiteProvider extends Component {
       if (document.getElementsByTagName("textarea").length) {
         document.getElementsByTagName("textarea")[0].value = "";
       }
+    }else{
+      this.setState({
+        error: true,
+      });
     }
   };
 
