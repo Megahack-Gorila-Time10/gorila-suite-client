@@ -10,6 +10,10 @@ import SuitabilityType from "./SuitabilityType";
 import Card from "./Card";
 import OnBoardingTitle from "./OnBoardingTitle";
 import TextArea from "./TextArea";
+import WhiteHeader from "./WhiteHeader";
+import BodyCurve from "./BodyCurve";
+import CrossCurve from "./CrossCurve";
+import DepoimentCard from "./DepoimentCard";
 
 export {
   Button,
@@ -24,4 +28,8 @@ export {
   RadioButton,
   SuitabilityType,
   TextArea,
+  WhiteHeader,
+  BodyCurve,
+  CrossCurve,
+  DepoimentCard,
 };

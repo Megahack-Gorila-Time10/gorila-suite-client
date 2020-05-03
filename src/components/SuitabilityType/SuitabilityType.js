@@ -7,7 +7,6 @@ class SuitabilityType extends Component {
     return (
       <S.InfoWrapper>
         <S.GorilaImg color={"#4CDE93"} />
-        <S.Paragraph>Seu Perfil Gorila é</S.Paragraph>
         <S.Type>{this.context.state.profileResult.title}</S.Type>
         <S.Paragraph>
           {this.context.state.profileResult.description}
