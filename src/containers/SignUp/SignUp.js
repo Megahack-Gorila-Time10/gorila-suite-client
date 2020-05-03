@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { Header, Form, ColorFooter } from "../../components";
 import * as G from "../../resources/globalStyle";
 import * as S from "./style";
+import SiteContext from "../../context/SiteContext";
 
 class SignUp extends Component {
   state = {};
@@ -23,6 +24,10 @@ class SignUp extends Component {
                   placeholders={placeholders}
                   names={names}
                   router={this.props}
+                  currentName={this.context.state.name}
+                  currentEmail={this.context.state.email}
+                  handleInput={this.context.handleInput}
+                  nextPath="/sites/onboarding"
                 />
               </div>
               <S.Illustration />
@@ -34,5 +39,7 @@ class SignUp extends Component {
     );
   }
 }
+
+SignUp.contextType = SiteContext;
 
 export default SignUp;

@@ -1,13 +1,12 @@
 import React, { Component, Fragment } from "react";
-import SuitabilityContext from "../../context/SuitabilityContext";
 import InputBox from "../InputBox";
 import Button from "../Button";
 import * as S from "./style";
 
 class Form extends Component {
   formValidate = () => {
-    if (this.context.state.name != "" && this.context.state.email != "") {
-      this.props.router.history.push("/perfil/suitability");
+    if (this.props.currentName != "" && this.props.currentEmail != "") {
+      this.props.router.history.push(this.props.nextPath);
     }
   };
 
@@ -19,7 +18,7 @@ class Form extends Component {
           key={i}
           placeholder={this.props.placeholders[i]}
           name={this.props.names[i]}
-          handleInput={this.context.handleInput}
+          handleInput={this.props.handleInput}
         />
       );
     }
@@ -34,7 +33,5 @@ class Form extends Component {
     );
   }
 }
-
-Form.contextType = SuitabilityContext;
 
 export default Form;

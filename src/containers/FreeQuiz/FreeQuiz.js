@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Header, Form, ColorFooter } from "../../components";
+import SuitabilityContext from "../../context/SuitabilityContext";
 import * as G from "../../resources/globalStyle";
 import * as S from "./style";
 
@@ -22,6 +23,10 @@ class FreeQuiz extends Component {
                   placeholders={placeholders}
                   names={names}
                   router={this.props}
+                  currentName={this.context.state.name}
+                  currentEmail={this.context.state.email}
+                  handleInput={this.context.handleInput}
+                  nextPath="/perfil/suitability"
                 />
               </div>
               <S.Illustration />
@@ -33,5 +38,7 @@ class FreeQuiz extends Component {
     );
   }
 }
+
+FreeQuiz.contextType = SuitabilityContext;
 
 export default FreeQuiz;
