@@ -3,7 +3,7 @@ import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import SuitabilityProvider from "./context/SuitabilityProvider";
 
-import { Login, Question } from "./containers";
+import { Login, Question, SuitabilityProfile } from "./containers";
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Login} />
         <Route exact path="/suitability" component={Question} />
+        <Route exact path="/suitability/perfil" component={SuitabilityProfile} />
       </Switch>
     </SuitabilityProvider>
   );

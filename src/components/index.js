@@ -6,6 +6,7 @@ import ColorFooter from "./ColorFooter";
 import Logo from "./Logo";
 import RadioButton from "./RadioButton";
 import LinearScale from "./LinearScale";
+import SuitabilityType from "./SuitabilityType";
 
 export {
   Button,
@@ -16,4 +17,5 @@ export {
   LinearScale,
   Logo,
   RadioButton,
+  SuitabilityType,
 };
