@@ -6,6 +6,8 @@ import {
 } from "../../components";
 import * as G from "../../resources/globalStyle";
 import SuitabilityContext from "../../context/SuitabilityContext";
+import Loader from 'react-loader-spinner'
+
 
 class SuitabilityProfile extends Component {
   componentDidMount = () => {
@@ -19,7 +21,17 @@ class SuitabilityProfile extends Component {
         <Header sectionTitle="Perfil" name={this.context.state.name} />
         <G.Wrapper>
           <G.FullPageWrapper>
-            <SuitabilityType />
+          {Object.values(this.context.state.profileResult).length === 0 ?  (
+            <Loader
+                type="Puff"
+                color="#4CDE93"
+                height={100}
+                width={100}
+              />
+            ) : (
+              <SuitabilityType />
+            )
+          }
           </G.FullPageWrapper>
         </G.Wrapper>
         <ColorFooter btnText="Compartilhar" />
