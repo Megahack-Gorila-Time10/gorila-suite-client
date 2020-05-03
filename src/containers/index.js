@@ -1,4 +1,4 @@
-import UserSite from "./UserSite"
+import MySite from "./MySite";
 import FreeQuiz from "./FreeQuiz";
 import Question from "./Question";
 import SuitabilityProfile from "./SuitabilityProfile";
@@ -7,4 +7,12 @@ import SignUp from "./SignUp";
 
 import Onboarding from "./Onboarding";
 
-export {Home, FreeQuiz, Onboarding, Question, SignUp, SuitabilityProfile,UserSite};
+export {
+  Home,
+  FreeQuiz,
+  Onboarding,
+  Question,
+  SignUp,
+  SuitabilityProfile,
+  MySite,
+};

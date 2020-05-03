@@ -12,6 +12,7 @@ import OnBoardingTitle from "./OnBoardingTitle";
 import TextArea from "./TextArea";
 import DepoimentCard from "./DepoimentCard";
 import Navbar from "./Navbar";
+import StartNow from "./StartNow";
 
 export {
   Button,
@@ -28,4 +29,5 @@ export {
   TextArea,
   DepoimentCard,
   Navbar,
+  StartNow,
 };

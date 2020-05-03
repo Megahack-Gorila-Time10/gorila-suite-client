@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { ColorFooter, Navbar } from "../../components";
+import { ColorFooter, Navbar, StartNow } from "../../components";
 import SiteContext from "../../context/SiteContext";
 import * as G from "../../resources/globalStyle";
 import * as S from "./style";
@@ -14,12 +14,19 @@ class MySite extends Component {
   render() {
     return (
       <Fragment>
-        <Navbar name={this.context.state.name}/>
+        <G.Wrapper>
+          <Navbar name={this.context.state.name} />
+          <StartNow
+            name={this.context.state.name}
+            headline={this.context.state.headline}
+            description={this.context.state.description}
+          />
+        </G.Wrapper>
       </Fragment>
     );
   }
 }
 
-MySite.contextType = SiteContext
+MySite.contextType = SiteContext;
 
 export default MySite;
