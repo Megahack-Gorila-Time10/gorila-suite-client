@@ -34,6 +34,13 @@ const Section = styled.div`
 
 const Step = styled.div`
   display: flex;
+  justify-content: center;
+`;
+
+const VAlign = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export {
@@ -43,4 +50,5 @@ export {
   GreenLine,
   Section,
   Step,
+  VAlign,
 };
