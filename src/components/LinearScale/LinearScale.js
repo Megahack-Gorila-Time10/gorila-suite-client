@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import RadioButton from "../RadioButton/RadioButton";
 import * as S from "./style";
 import SuitabilityContext from "../../context/SuitabilityContext";
+import Fraction from "../Fraction/Fraction";
 
 class LinearScale extends Component {
   setSelected = (value) => {
@@ -12,17 +13,11 @@ class LinearScale extends Component {
     return (
       <Fragment>
         <S.VerticalAlign>
-          <S.Step>
-            <S.CurrentStep>
-              {this.context.state.currentQuestion.step}
-            </S.CurrentStep>
-            <S.CurrentStepBar> / </S.CurrentStepBar>
-            <S.CurrentStepDenominator>
-              {this.context.state.currentQuestion.denominator}
-            </S.CurrentStepDenominator>
-          </S.Step>
-          <S.Section>{this.context.state.currentQuestion.category}</S.Section>
-          <S.GreenLine />
+          <Fraction
+            step={this.context.state.currentQuestion.step}
+            denominator={this.context.state.currentQuestion.denominator}
+            category={this.context.state.currentQuestion.category}
+          />
           <S.Question>{this.context.state.currentQuestion.question}</S.Question>
           <S.Scale>
             <S.Measurement>

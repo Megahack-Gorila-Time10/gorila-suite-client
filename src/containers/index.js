@@ -4,4 +4,6 @@ import SuitabilityProfile from "./SuitabilityProfile";
 import Home from "./Home";
 import SignUp from "./SignUp";
 
-export { Home, FreeQuiz, Question, SignUp, SuitabilityProfile };
+import Onboarding from "./Onboarding";
+
+export { Home, FreeQuiz, Onboarding, Question, SignUp, SuitabilityProfile };
