@@ -3,15 +3,20 @@ import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import SuitabilityProvider from "./context/SuitabilityProvider";
 
-import { Login, Question, SuitabilityProfile } from "./containers";
+import { Login, Question, SuitabilityProfile, Home } from "./containers";
 
 function App() {
   return (
     <SuitabilityProvider>
       <Switch>
-        <Route exact path="/" component={Login} />
-        <Route exact path="/suitability" component={Question} />
-        <Route exact path="/suitability/perfil" component={SuitabilityProfile} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/perfil/" component={Login} />
+        <Route exact path="/perfil/suitability" component={Question} />
+        <Route
+          exact
+          path="/perfil/suitability/meu-perfil"
+          component={SuitabilityProfile}
+        />
       </Switch>
     </SuitabilityProvider>
   );
