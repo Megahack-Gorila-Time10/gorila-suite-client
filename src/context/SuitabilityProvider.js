@@ -154,6 +154,10 @@ class SuitabilityProvider extends Component {
   };
 
   render() {
+    if (window.location.pathname !== "/" && this.state.name === "") {
+      this.goHome();
+    }
+
     const context = {
       state: this.state,
       handleNextQuestion: this.handleNextQuestion,
