@@ -14,6 +14,7 @@ import DepoimentCard from "./DepoimentCard";
 import Navbar from "./Navbar";
 import StartNow from "./StartNow";
 import CurvedBanner from "./CurvedBanner";
+import MySiteMainSection from "./MySiteMainSection";
 
 export {
   Button,
@@ -30,6 +31,7 @@ export {
   SuitabilityType,
   TextArea,
   DepoimentCard,
+  MySiteMainSection,
   Navbar,
   StartNow,
 };
