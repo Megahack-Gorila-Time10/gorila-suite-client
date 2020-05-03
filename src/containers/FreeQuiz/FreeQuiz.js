@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { Header, Form, ColorFooter } from "../../components";
 import * as G from "../../resources/globalStyle";
-class Login extends Component {
+class FreeQuiz extends Component {
   render() {
     const numberOfInputs = 2;
     const placeholders = ["Nome", "E-mail"];
@@ -27,4 +27,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default FreeQuiz;
