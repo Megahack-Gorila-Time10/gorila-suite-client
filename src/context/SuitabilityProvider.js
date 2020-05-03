@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import SuitabilityContext from "./SuitabilityContext";
+import server from "../resources/axios";
+import { ML_PROFILE_URL } from "../resources/constants";
 
 class SuitabilityProvider extends Component {
   constructor(props) {
@@ -109,6 +111,7 @@ class SuitabilityProvider extends Component {
       currentSelect: 3,
       currentQuestion: this.questions[this.index],
       allRes: [],
+      profileResult: {},
     };
   }
 
@@ -130,6 +133,26 @@ class SuitabilityProvider extends Component {
         currentQuestion: this.questions[this.index],
         currentSelect: 3,
       });
+    } else {
+      let newAllRes = this.state.allRes;
+      newAllRes.push(parseInt(this.state.currentSelect));
+      this.index++;
+      this.setState({
+        allRes: newAllRes,
+      });
+      server(ML_PROFILE_URL)
+        .post("/predict", { answers: this.state.allRes })
+        .then((res) => {
+          console.log(res.data);
+          const { description, title } = res.data;
+          this.setState({
+            profileResult: { description, title },
+          });
+          history.push("/suitability/perfil");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
   };
 
