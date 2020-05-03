@@ -33,8 +33,8 @@ class SiteProvider extends Component {
       // [5, "Escolha a paleta de cores do site", "Salvar"],
     ];
     this.state = {
-      name: "Gabriel",
-      email: "g",
+      name: "",
+      email: "",
       ["job-title"]: "",
       role: "",
       ["professional-experience"]: "",
