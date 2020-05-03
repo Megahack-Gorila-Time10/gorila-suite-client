@@ -3,11 +3,14 @@ import * as colors from "../../resources/colors";
 
 const Btn = styled.div`
   color: #ffffff;
+  text-align: center;
   font-weight: 800;
   font-size: 26px;
   background-image: linear-gradient(${colors.greenGradient});
-  width: 211px;
+  width: fit-content;
+  min-width: 211px;
   height: 50px;
+  padding: 6px;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -21,11 +24,14 @@ const Btn = styled.div`
 
 const BtnLG = styled.div`
   color: #ffffff;
+  text-align: center;
   font-weight: 800;
   font-size: 26px;
   background-image: linear-gradient(${colors.greenGradient});
-  width: 224px;
+  width: fit-content;
+  min-width: 224px;
   height: 70px;
+  padding: 6px;
   border-radius: 8px;
   display: flex;
   align-items: center;
