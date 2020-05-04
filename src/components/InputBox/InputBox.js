@@ -8,6 +8,7 @@ class InputBox extends Component {
           {
             this.props.error ? (
               <S.InputError
+                autoComplete="off"
                 placeholder={this.props.placeholder}
                 name={this.props.name}
                 onChange={this.props.handleInput}
@@ -15,6 +16,7 @@ class InputBox extends Component {
               />
             ) : (
               <S.Input
+                autoComplete="off"
                 placeholder={this.props.placeholder}
                 name={this.props.name}
                 onChange={this.props.handleInput}
