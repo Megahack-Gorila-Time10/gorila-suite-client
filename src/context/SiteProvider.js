@@ -51,6 +51,7 @@ class SiteProvider extends Component {
       phone: "",
       currentTitle: this.titles[this.index],
       redirect: null,
+      error: false,
     };
   }
 
@@ -117,9 +118,13 @@ class SiteProvider extends Component {
   };
 
   handleNextQuestion = () => {
+    if (!this.validInputs()) {
+      this.setState({ error: true,)}
+    }
     if (this.index < this.titles.length - 1 && this.validInputs()) {
       this.index++;
       this.setState({
+        error: false,
         currentTitle: this.titles[this.index],
       });
       if (document.getElementsByTagName("input").length) {

@@ -17,6 +17,7 @@ import CurvedBanner from "./CurvedBanner";
 import MySiteMainSection from "./MySiteMainSection";
 import ClientDepositions from "./ClientDepositions";
 import MySiteFooter from "./MySiteFooter";
+import RadarGraph from "./RadarGraph";
 
 export {
   Button,
@@ -38,4 +39,5 @@ export {
   MySiteFooter,
   Navbar,
   StartNow,
+  RadarGraph,
 };

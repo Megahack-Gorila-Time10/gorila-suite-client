@@ -132,16 +132,16 @@ class SuitabilityProvider extends Component {
       newAllRes.push(parseInt(this.state.currentSelect));
       this.index++;
       this.setState({
+        redirect: "/perfil/suitability/meu-perfil",
         allRes: newAllRes,
       });
       server(ML_PROFILE_URL)
         .post("/predict", { answers: this.state.allRes })
         .then((res) => {
           console.log(res.data);
-          const { description, title } = res.data;
+          const { description, title, data_points} = res.data;
           this.setState({
-            profileResult: { description, title },
-            redirect: "/perfil/suitability/meu-perfil",
+            profileResult: { description, title, data_points },
           });
         })
         .catch((err) => {

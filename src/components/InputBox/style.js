@@ -15,4 +15,18 @@ const Input = styled.input`
   margin: 8px 0;
 `;
 
-export { Input };
+const InputError = styled.input`
+  border: 1px solid ${colors.softRed};
+  box-sizing: border-box;
+  border-radius: 10px;
+  max-width: 500px;
+  height: 50px;
+  font-size: 21px;
+  line-height: 26px;
+  color: ${colors.darkGrey};
+  font-family: Montserrat;
+  font-weight: 300;
+  margin: 8px 0;
+`;
+
+export { Input, InputError };

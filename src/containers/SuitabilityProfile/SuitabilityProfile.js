@@ -3,9 +3,13 @@ import {
   Header,
   ColorFooter,
   SuitabilityType,
+  RadarGraph,
 } from "../../components";
 import * as G from "../../resources/globalStyle";
+import * as S from "./style";
 import SuitabilityContext from "../../context/SuitabilityContext";
+import Loader from 'react-loader-spinner'
+
 
 class SuitabilityProfile extends Component {
   componentDidMount = () => {
@@ -13,13 +17,27 @@ class SuitabilityProfile extends Component {
       this.context.goHome();
     }
   };
+  
   render() {
     return (
       <Fragment>
         <Header sectionTitle="Perfil" name={this.context.state.name} />
         <G.Wrapper>
           <G.FullPageWrapper>
-            <SuitabilityType />
+          {Object.values(this.context.state.profileResult).length === 0 ?  (
+            <Loader
+                type="Puff"
+                color="#4CDE93"
+                height={100}
+                width={100}
+              />
+            ) : (
+              <S.Content>
+                <SuitabilityType />
+                <RadarGraph />
+              </S.Content>
+            )
+          }
           </G.FullPageWrapper>
         </G.Wrapper>
         <ColorFooter btnText="Compartilhar" />
