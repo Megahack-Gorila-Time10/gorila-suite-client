@@ -14,6 +14,8 @@ const CardWrapper = styled.div`
   margin: 24px;
   flex-shrink: 0;
   padding: 0 20px;
+
+  position: relative;
 `;
 
 const Header = styled.div`
@@ -36,4 +38,11 @@ const Title = styled.div`
   color: ${colors.darkGrey};
 `;
 
-export { CardWrapper, Header, Info, Title };
+const Aspas = styled.div`
+  font-size: 174px;
+  position: absolute;
+  left: 12px; 
+  top: -24px; 
+`;
+
+export { Aspas, CardWrapper, Header, Info, Title };

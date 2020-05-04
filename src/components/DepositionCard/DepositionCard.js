@@ -5,6 +5,7 @@ class DepositionCard extends Component {
   render() {
     return (
       <S.CardWrapper>
+        <S.Aspas>”</S.Aspas>
         <S.Info>{this.props.info}</S.Info>
         <S.Header>
           <S.Title>{this.props.title}</S.Title>
