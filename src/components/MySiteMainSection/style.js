@@ -55,7 +55,7 @@ const IconCircle = styled.div`
 
 const Power1 = styled.div`
   background-image: url(/img/png/power1.png);
-  width: 587px;
+  width: 627px;
   height: 312px;
   background-possition: center;
   background-repeat: no-repeat;
@@ -63,7 +63,7 @@ const Power1 = styled.div`
 
 const Power2 = styled.div`
   background-image: url(/img/png/power2.png);
-  width: 381px;
+  width: 421px;
   height: 416px;
   background-possition: center;
   background-repeat: no-repeat;

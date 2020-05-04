@@ -37,19 +37,20 @@ class MySite extends Component {
           />
         </G.Wrapper>
         <CurvedBanner
-          title="Excelência por trás"
-          paragraph="Quis accumsan at ultrices odio arcu. Tellus tincidunt tellus cursus ac eget nisl facilisi. Commodo sem neque, leo non. Amet duis duis nisl sit. Viverra at ut in tortor volutpat. Et morbi mauris dignissim porttitor tincidunt pellentesque diam. Natoque aliquam id eget massa faucibus nulla leo est ut. Augue ipsum quis augue ut."
+          title={this.context.state.information_title}
+          paragraph={this.context.state.information_paragraph}
         />
         <G.Wrapper>
           <MySiteMainSection
             title1="Sugestões totalmente personalizadas"
             subtitle1="Baseadas em seu perfil de investimento"
-            paragraph1="Quis accumsan at ultrices odio arcu. Tellus tincidunt tellus cursus ac eget nisl facilisi. Commodo sem neque, leo non. Amet duis duis nisl sit. Viverra at ut in tortor volutpat. Et morbi mauris dignissim porttitor tincidunt pellentesque diam. Natoque aliquam id eget massa faucibus nulla leo est ut. Augue ipsum quis augue ut."
+            paragraph1="A nossa ferramenta de gestão de Perfis de investimento permite que o entregue sugesões assertivas que atendam as suas necessiades de investimento particulares."
             title2="Monitore seus investimentos"
             subtitle2="Com comentários e sugestões personalizada"
-            paragraph2="Quis accumsan at ultrices odio arcu. Tellus tincidunt tellus cursus ac eget nisl facilisi. Commodo sem neque, leo non. Amet duis duis nisl sit. Viverra at ut in tortor volutpat. Et morbi mauris dignissim porttitor tincidunt pellentesque diam. Natoque aliquam id eget massa faucibus nulla leo est ut. Augue ipsum quis augue ut."
+            paragraph2="Você poderá monitorar todos os seus investimentos em um único lugar! Com direito à comentários personalizados direcionados ao seu perfil. Sem enrolação nem SPAMs."
           />
         </G.Wrapper>
+        
         <ClientDepositions />
         <MySiteFooter />
       </Fragment>

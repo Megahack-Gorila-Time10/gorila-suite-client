@@ -15,7 +15,6 @@ const BannerBG = styled.div`
 const Cards = styled.div`
   display: flex;
   align-items: center;
-  overflow: scroll;
   width: 100&;
 `;
 
