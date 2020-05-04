@@ -11,7 +11,7 @@ class MySiteMainSection extends Component {
             <S.IconUp />
             <S.Title>{this.props.title1}</S.Title>
             <S.SubTitle>{this.props.subtitle1}</S.SubTitle>
-            <S.Paragraph>{this.props.paragraph1}</S.Paragraph>
+            <S.Paragraph align="right">{this.props.paragraph1}</S.Paragraph>
           </S.ContentWrapper>
           <S.ContentWrapper align="center">
             <S.Power1 />

@@ -1,13 +1,7 @@
 import React, { Component } from "react";
-import Logo from "../Logo";
 import * as S from "./style";
-import Button from "../Button";
 
-class DepoimentCard extends Component {
-  handleClick = () => {
-    console.log(this.props.router);
-    this.props.router.history.push(this.props.to)
-  };
+class DepositionCard extends Component {
   render() {
     return (
       <S.CardWrapper>
@@ -20,4 +14,4 @@ class DepoimentCard extends Component {
   }
 }
 
-export default DepoimentCard;
+export default DepositionCard;

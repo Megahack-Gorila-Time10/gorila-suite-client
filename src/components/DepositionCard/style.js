@@ -11,7 +11,8 @@ const CardWrapper = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin:24px;
+  margin: 24px;
+  flex-shrink: 0;
 `;
 
 const Header = styled.div`
