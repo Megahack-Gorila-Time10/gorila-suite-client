@@ -14,6 +14,7 @@ class Header extends Component {
           <Logo white handleClick={this.goHome} />
         </S.TitleWrapper>
         <S.Name>{this.props.name}</S.Name>
+        {this.props.hack && <S.MegaHack />}
       </S.HeaderBG>
     );
   }

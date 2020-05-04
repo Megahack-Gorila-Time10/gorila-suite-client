@@ -33,4 +33,13 @@ const Name = styled.div`
   text-align: center;
 `;
 
-export { HeaderBG, Name, Title, TitleWrapper };
+const MegaHack = styled.div`
+  background-image: url(/img/png/megahack.png);
+  position: absolute;
+  top: 34px;
+  right: 40px;
+  height: 142px;
+  width: 171px;
+`;
+
+export { HeaderBG, Name, Title, TitleWrapper, MegaHack };

@@ -8,7 +8,7 @@ class Home extends Component {
   render() {
     return (
       <Fragment>
-        <Header />
+        <Header hack />
         <G.Wrapper>
           <G.FullPageWrapper>
             <S.Cards>
