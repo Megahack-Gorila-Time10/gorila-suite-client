@@ -16,7 +16,7 @@ const CardWrapper = styled.div`
 `;
 
 const CardWrapperDis = styled.div`
-  background: rgba(10, 10, 10, 0.8);
+  background: rgba(10, 10, 10, 0.79);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   width: 100%;
