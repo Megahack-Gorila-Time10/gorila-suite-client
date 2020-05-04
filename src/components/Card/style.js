@@ -41,13 +41,13 @@ const Title = styled.div`
   font-weight: 800;
   font-size: 39px;
   line-height: 48px;
-  color: ${colors.lightGrey};
+  color: ${colors.darkGrey};
 `;
 const TitleDis = styled.div`
   font-weight: 800;
   font-size: 20px;
   line-height: 48px;
-  color: ${colors.darkGrey};
+  color: #c4c4c4;
 `;
 
 export { CardWrapper, CardWrapperDis, Header, Info, Title, TitleDis };
