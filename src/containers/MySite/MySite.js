@@ -24,6 +24,7 @@ class MySite extends Component {
       console.log(this.props.match.params.username);
       this.context.getUserData(this.props.match.params.username);
     }
+    this.context.getDepositions();
   };
   render() {
     return (
@@ -50,9 +51,14 @@ class MySite extends Component {
             paragraph2="Você poderá monitorar todos os seus investimentos em um único lugar! Com direito à comentários personalizados direcionados ao seu perfil. Sem enrolação nem SPAMs."
           />
         </G.Wrapper>
-        
-        <ClientDepositions />
-        <MySiteFooter />
+
+        <ClientDepositions deps={this.context.state.deps} />
+        <MySiteFooter
+          name={this.context.state.name}
+          headline={this.context.state.headline}
+          phone={this.context.state.phone}
+          email={this.context.state.email}
+        />
       </Fragment>
     );
   }

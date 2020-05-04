@@ -52,6 +52,7 @@ class SiteProvider extends Component {
       currentTitle: this.titles[this.index],
       redirect: null,
       error: false,
+      deps: {},
     };
   }
 
@@ -117,6 +118,20 @@ class SiteProvider extends Component {
       });
   };
 
+  getDepositions = () => {
+    server(SITES_DB)
+      .get("/getComments")
+      .then((res) => {
+        console.log(res.data);
+        this.setState({
+          deps: res.data.commentValues,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   handleNextQuestion = () => {
     if (!this.validInputs()) {
       this.setState({ error: true });
@@ -166,6 +181,7 @@ class SiteProvider extends Component {
       goHome: this.goHome,
       handleNextQuestion: this.handleNextQuestion,
       getUserData: this.getUserData,
+      getDepositions: this.getDepositions,
     };
 
     console.log(context.state);

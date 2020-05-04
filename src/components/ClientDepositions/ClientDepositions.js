@@ -14,9 +14,13 @@ class ClientDepositions extends Component {
             <S.VCenter>
               <S.Title>Depoimentos</S.Title>
               <S.Cards>
-                <DepositionCard title="Gabe" info="Hollo World" />
-                <DepositionCard title="Gabe" info="Hollo World" />
-                <DepositionCard title="Gabe" info="Hollo World" />
+                {this.props.deps.length && (
+                  <Fragment>
+                    <DepositionCard title={this.props.deps[0].name} info={this.props.deps[0].comment} />
+                    <DepositionCard title={this.props.deps[1].name} info={this.props.deps[1].comment} />
+                    <DepositionCard title={this.props.deps[2].name} info={this.props.deps[2].comment} />
+                  </Fragment>
+                )}
               </S.Cards>
               <Button text="começe sua assessoria" />
             </S.VCenter>
