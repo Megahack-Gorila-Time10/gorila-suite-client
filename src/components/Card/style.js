@@ -11,7 +11,17 @@ const CardWrapper = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin:24px;
+  margin: 24px;
+  position: relative;
+`;
+
+const CardWrapperDis = styled.div`
+  background: rgba(10, 10, 10, 0.8);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 `;
 
 const Header = styled.div`
@@ -31,7 +41,13 @@ const Title = styled.div`
   font-weight: 800;
   font-size: 39px;
   line-height: 48px;
+  color: ${colors.lightGrey};
+`;
+const TitleDis = styled.div`
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 48px;
   color: ${colors.darkGrey};
 `;
 
-export { CardWrapper, Header, Info, Title };
+export { CardWrapper, CardWrapperDis, Header, Info, Title, TitleDis };

@@ -26,6 +26,13 @@ class Home extends Component {
                 to="/perfil"
                 router={this.props}
               />
+              <Card
+                title="Automações"
+                btnText="em breve"
+                info="Envios automáticos Relatórios personalizados Flexibilidade de conteúdo Entrega valor na escala"
+                to=""
+                disable
+              />
             </S.Cards>
           </G.FullPageWrapper>
         </G.Wrapper>
