@@ -119,7 +119,7 @@ class SiteProvider extends Component {
 
   handleNextQuestion = () => {
     if (!this.validInputs()) {
-      this.setState({ error: true,)}
+      this.setState({ error: true });
     }
     if (this.index < this.titles.length - 1 && this.validInputs()) {
       this.index++;
