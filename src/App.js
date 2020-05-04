@@ -10,7 +10,7 @@ import {
   Home,
   SignUp,
   Onboarding,
-  UserSite,
+  MySite,
 } from "./containers";
 import SiteProvider from "./context/SiteProvider";
 
@@ -33,7 +33,7 @@ function App() {
         <Switch>
           <Route exact path="/sites" component={SignUp} />
           <Route exact path="/sites/onboarding" component={Onboarding} />
-          <Route exact path="/sites/usersite" component={UserSite} />
+          <Route exact path="/sites/:username" component={MySite} />
         </Switch>
       </SiteProvider>
     </Fragment>

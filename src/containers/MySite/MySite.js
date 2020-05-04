@@ -6,6 +6,7 @@ import {
   CurvedBanner,
   MySiteMainSection,
   ClientDepositions,
+  MySiteFooter,
 } from "../../components";
 import SiteContext from "../../context/SiteContext";
 import * as G from "../../resources/globalStyle";
@@ -44,6 +45,7 @@ class MySite extends Component {
           />
         </G.Wrapper>
         <ClientDepositions/>
+        <MySiteFooter/>
       </Fragment>
     );
   }

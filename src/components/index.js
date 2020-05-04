@@ -10,15 +10,18 @@ import SuitabilityType from "./SuitabilityType";
 import Card from "./Card";
 import OnBoardingTitle from "./OnBoardingTitle";
 import TextArea from "./TextArea";
-import DepoimentCard from "./DepoimentCard";
+import DepositionCard from "./DepositionCard";
 import Navbar from "./Navbar";
 import StartNow from "./StartNow";
 import CurvedBanner from "./CurvedBanner";
 import MySiteMainSection from "./MySiteMainSection";
+import ClientDepositions from "./ClientDepositions";
+import MySiteFooter from "./MySiteFooter";
 
 export {
   Button,
   Card,
+  ClientDepositions,
   CurvedBanner,
   ColorFooter,
   Form,
@@ -30,8 +33,9 @@ export {
   RadioButton,
   SuitabilityType,
   TextArea,
-  DepoimentCard,
+  DepositionCard,
   MySiteMainSection,
+  MySiteFooter,
   Navbar,
   StartNow,
 };

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Logo from "../Logo";
 import Button from "../Button";
-import * as S from "./Style";
+import * as S from "./style";
 
 
 class ColorFooter extends Component {
