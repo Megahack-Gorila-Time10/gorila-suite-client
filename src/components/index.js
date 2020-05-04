@@ -10,6 +10,7 @@ import SuitabilityType from "./SuitabilityType";
 import Card from "./Card";
 import OnBoardingTitle from "./OnBoardingTitle";
 import TextArea from "./TextArea";
+import RadarGraph from "./RadarGraph";
 
 export {
   Button,
@@ -24,4 +25,5 @@ export {
   RadioButton,
   SuitabilityType,
   TextArea,
+  RadarGraph,
 };

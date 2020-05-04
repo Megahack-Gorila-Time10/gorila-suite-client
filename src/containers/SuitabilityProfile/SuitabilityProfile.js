@@ -3,8 +3,10 @@ import {
   Header,
   ColorFooter,
   SuitabilityType,
+  RadarGraph,
 } from "../../components";
 import * as G from "../../resources/globalStyle";
+import * as S from "./style";
 import SuitabilityContext from "../../context/SuitabilityContext";
 import Loader from 'react-loader-spinner'
 
@@ -15,6 +17,7 @@ class SuitabilityProfile extends Component {
       this.context.goHome();
     }
   };
+  
   render() {
     return (
       <Fragment>
@@ -29,7 +32,10 @@ class SuitabilityProfile extends Component {
                 width={100}
               />
             ) : (
-              <SuitabilityType />
+              <S.Content>
+                <SuitabilityType />
+                <RadarGraph />
+              </S.Content>
             )
           }
           </G.FullPageWrapper>

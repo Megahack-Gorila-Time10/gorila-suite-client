@@ -139,9 +139,9 @@ class SuitabilityProvider extends Component {
         .post("/predict", { answers: this.state.allRes })
         .then((res) => {
           console.log(res.data);
-          const { description, title } = res.data;
+          const { description, title, data_points} = res.data;
           this.setState({
-            profileResult: { description, title },
+            profileResult: { description, title, data_points },
           });
         })
         .catch((err) => {
