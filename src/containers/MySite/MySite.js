@@ -41,6 +41,7 @@ class MySite extends Component {
                 name={this.context.state.name}
                 headline={this.context.state.headline}
                 description={this.context.state.description}
+                router={this.props}
               />
             </G.Wrapper>
             <CurvedBanner
@@ -58,7 +59,7 @@ class MySite extends Component {
               />
             </G.Wrapper>
 
-            <ClientDepositions deps={this.context.state.deps} />
+            <ClientDepositions deps={this.context.state.deps} router={this.props}/>
             <MySiteFooter
               name={this.context.state.name}
               headline={this.context.state.headline}

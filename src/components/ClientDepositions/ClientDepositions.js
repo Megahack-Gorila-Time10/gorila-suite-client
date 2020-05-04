@@ -6,6 +6,9 @@ import Button from "../Button";
 
 class ClientDepositions extends Component {
   state = {};
+  takeToQuiz = () => {
+    this.props.router.history.push("/perfil");
+  };
   render() {
     return (
       <Fragment>
@@ -16,13 +19,25 @@ class ClientDepositions extends Component {
               <S.Cards>
                 {this.props.deps.length && (
                   <Fragment>
-                    <DepositionCard title={this.props.deps[0].name} info={this.props.deps[0].comment} />
-                    <DepositionCard title={this.props.deps[1].name} info={this.props.deps[1].comment} />
-                    <DepositionCard title={this.props.deps[2].name} info={this.props.deps[2].comment} />
+                    <DepositionCard
+                      title={this.props.deps[0].name}
+                      info={this.props.deps[0].comment}
+                    />
+                    <DepositionCard
+                      title={this.props.deps[1].name}
+                      info={this.props.deps[1].comment}
+                    />
+                    <DepositionCard
+                      title={this.props.deps[2].name}
+                      info={this.props.deps[2].comment}
+                    />
                   </Fragment>
                 )}
               </S.Cards>
-              <Button text="começe sua assessoria" />
+              <Button
+                text="começe sua assessoria"
+                handleClick={this.takeToQuiz}
+              />
             </S.VCenter>
           </G.Wrapper>
         </S.BannerBG>
