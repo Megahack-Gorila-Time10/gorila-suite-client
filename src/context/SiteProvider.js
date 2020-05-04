@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import SiteContext from "./SiteContext";
+import server from "../resources/axios";
+import { SITES_DB } from "../resources/constants";
 
 class SiteProvider extends Component {
   constructor(props) {
@@ -16,18 +18,18 @@ class SiteProvider extends Component {
         "Informação individuais",
         "Próximo",
         "Cargo",
-        "job-title",
+        "headline",
         "Descrição",
-        "role",
+        "description",
       ],
       [
         3,
         "Descreva sua experiência profissional",
         "Próximo",
         "Título",
-        "professional-experience",
+        "information_title",
         "Descrição",
-        "achievements",
+        "information_paragraph",
       ],
       [4, "Informações de contato", "Póximo", "Celular", "phone"],
       [
@@ -39,15 +41,16 @@ class SiteProvider extends Component {
       ],
     ];
     this.state = {
-      name: "g",
-      email: "g",
+      name: "",
+      email: "",
       username: "",
-      ["job-title"]: "g",
-      role: "g",
-      ["professional-experience"]: "g",
-      achievements: "g",
-      phone: "9",
+      headline: "",
+      description: "",
+      information_title: "",
+      information_paragraph: "",
+      phone: "",
       currentTitle: this.titles[this.index],
+      redirect: null,
     };
   }
 
@@ -64,15 +67,15 @@ class SiteProvider extends Component {
       case 0:
         return true;
       case 1:
-        if (this.state["job-title"] !== "" && this.state.role !== "") {
+        if (this.state["headline"] !== "" && this.state.description !== "") {
           return true;
         } else {
           return false;
         }
       case 2:
         if (
-          this.state["professional-experience"] !== "" &&
-          this.state.achievements !== ""
+          this.state["information_title"] !== "" &&
+          this.state.information_paragraph !== ""
         ) {
           return true;
         } else {
@@ -90,6 +93,29 @@ class SiteProvider extends Component {
     }
   };
 
+  getUserData = (user) => {
+    server(SITES_DB)
+      .post("/getData", {
+        username: user,
+      })
+      .then((res) => {
+        console.log(res.data);
+        this.setState({
+          name: res.data.name,
+          email: res.data.email,
+          username: res.data.username,
+          headline: res.data.headline,
+          description: res.data.description,
+          information_title: res.data.information_title,
+          information_paragraph: res.data.information_paragraph,
+          phone: res.data.phone,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   handleNextQuestion = () => {
     if (this.index < this.titles.length - 1 && this.validInputs()) {
       this.index++;
@@ -102,6 +128,28 @@ class SiteProvider extends Component {
       if (document.getElementsByTagName("textarea").length) {
         document.getElementsByTagName("textarea")[0].value = "";
       }
+    } else {
+      server(SITES_DB)
+        .post("/insertData", {
+          username: this.state.username,
+          name: this.state.name,
+          phone: this.state.phone,
+          email: this.state.email,
+          headline: this.state.headline,
+          description: this.state.description,
+          information_title: this.state.information_title,
+          information_paragraph: this.state.information_paragraph,
+          color: "788EFF",
+        })
+        .then((res) => {
+          console.log(res.data);
+          this.setState({
+            redirect: `/sites/${this.state.username}`,
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
   };
 
@@ -112,6 +160,7 @@ class SiteProvider extends Component {
       handleInput: this.handleInput,
       goHome: this.goHome,
       handleNextQuestion: this.handleNextQuestion,
+      getUserData: this.getUserData,
     };
 
     console.log(context.state);

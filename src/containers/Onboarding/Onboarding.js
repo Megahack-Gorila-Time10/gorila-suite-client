@@ -10,6 +10,7 @@ import * as G from "../../resources/globalStyle";
 import * as S from "./style";
 import SiteContext from "../../context/SiteContext";
 import Fraction from "../../components/Fraction/Fraction";
+import { Redirect } from "react-router-dom";
 
 class Onboarding extends Component {
   componentDidMount = () => {
@@ -19,6 +20,9 @@ class Onboarding extends Component {
   };
 
   render() {
+    if (this.context.state.redirect) {
+      return <Redirect to={this.context.state.redirect} />;
+    }
     return (
       <Fragment>
         <Header sectionTitle="Sites" name={this.context.state.name} />
@@ -51,7 +55,12 @@ class Onboarding extends Component {
                       handleInput={this.context.handleInput}
                     />
                   )}
-                  {this.context.index === 4 && <p>{window.location.origin}/sites/{this.context.state.username}</p>}
+                  {this.context.index === 4 && (
+                    <p>
+                      {window.location.origin}/sites/
+                      {this.context.state.username}
+                    </p>
+                  )}
                 </Fragment>
               )}
             </S.Content>

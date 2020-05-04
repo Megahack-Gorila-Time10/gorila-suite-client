@@ -19,6 +19,12 @@ class MySite extends Component {
     this.titles = ["title1", "title2", "title3"];
     this.infos = ["title1", "title2", "title3"];
   }
+  componentDidMount = async () => {
+    if (!this.context.username) {
+      console.log(this.props.match.params.username);
+      this.context.getUserData(this.props.match.params.username);
+    }
+  };
   render() {
     return (
       <Fragment>
@@ -44,8 +50,8 @@ class MySite extends Component {
             paragraph2="Quis accumsan at ultrices odio arcu. Tellus tincidunt tellus cursus ac eget nisl facilisi. Commodo sem neque, leo non. Amet duis duis nisl sit. Viverra at ut in tortor volutpat. Et morbi mauris dignissim porttitor tincidunt pellentesque diam. Natoque aliquam id eget massa faucibus nulla leo est ut. Augue ipsum quis augue ut."
           />
         </G.Wrapper>
-        <ClientDepositions/>
-        <MySiteFooter/>
+        <ClientDepositions />
+        <MySiteFooter />
       </Fragment>
     );
   }

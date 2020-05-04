@@ -7,10 +7,10 @@ class MySiteFooter extends Component {
     return (
       <Fragment>
         <G.Wrapper>
-          <S.Name>Gabriel</S.Name>
-          <S.Headline>Vendas</S.Headline>
-          <S.Phone>11 95492005</S.Phone>
-          <S.Email>gaazsig@gmail.com</S.Email>
+          <S.Name>{this.props.name}</S.Name>
+          <S.Headline>{this.props.headline}</S.Headline>
+          <S.Phone>{this.props.phone}</S.Phone>
+          <S.Email>{this.props.email}</S.Email>
         </G.Wrapper>
         <S.Footer>
           <S.PlaceLogo />
