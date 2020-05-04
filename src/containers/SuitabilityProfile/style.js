@@ -6,4 +6,16 @@ const Content = styled.div`
   justify-content: space-evenly;
 `;
 
-export { Content };
+const LoaderWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const LoadingText = styled.div`
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 26px;
+  margin: 0 0 0 12px;
+`;
+
+export { Content, LoaderWrapper, LoadingText };
