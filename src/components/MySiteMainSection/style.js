@@ -20,6 +20,7 @@ const Paragraph = styled.p`
   font-size: 16px;
   line-height: 20px;
   color: ${colors.darkGrey};
+  text-align: ${(props) => props.align};
 `;
 
 const ContentWrapper = styled.div`
