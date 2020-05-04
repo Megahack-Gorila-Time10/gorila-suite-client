@@ -13,6 +13,7 @@ const CardWrapper = styled.div`
   align-items: center;
   margin: 24px;
   position: relative;
+  padding: 0 20px;
 `;
 
 const CardWrapperDis = styled.div`
