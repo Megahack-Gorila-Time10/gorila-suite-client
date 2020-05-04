@@ -52,6 +52,8 @@ class SiteProvider extends Component {
       currentTitle: this.titles[this.index],
       redirect: null,
       error: false,
+      db: false,
+      newUser: false,
       deps: {},
     };
   }
@@ -111,10 +113,12 @@ class SiteProvider extends Component {
           information_title: res.data.information_title,
           information_paragraph: res.data.information_paragraph,
           phone: res.data.phone,
+          db: true,
         });
       })
       .catch((err) => {
         console.log(err);
+        window.location.href = "/";
       });
   };
 
@@ -148,7 +152,14 @@ class SiteProvider extends Component {
       if (document.getElementsByTagName("textarea").length) {
         document.getElementsByTagName("textarea")[0].value = "";
       }
-    } else {
+    } else if (
+      this.index >= this.titles.length - 1 &&
+      this.state.username !== ""
+    ) {
+      this.setState({
+        redirect: `/sites/${this.state.username}`,
+        newUser: true,
+      });
       server(SITES_DB)
         .post("/insertData", {
           username: this.state.username,
@@ -164,11 +175,12 @@ class SiteProvider extends Component {
         .then((res) => {
           console.log(res.data);
           this.setState({
-            redirect: `/sites/${this.state.username}`,
+            db: true,
           });
         })
         .catch((err) => {
           console.log(err);
+          alert(err);
         });
     }
   };
