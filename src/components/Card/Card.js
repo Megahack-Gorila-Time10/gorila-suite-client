@@ -12,7 +12,6 @@ class Card extends Component {
     return !this.props.disable ? (
       <S.CardWrapper>
         <S.Header>
-          {" "}
           <S.Title>{this.props.title}</S.Title> <Logo />{" "}
         </S.Header>{" "}
         <S.Info>{this.props.info}</S.Info>{" "}
@@ -20,12 +19,16 @@ class Card extends Component {
       </S.CardWrapper>
     ) : (
       <S.CardWrapper>
-        <S.CardWrapperDis/>
-          <S.Header>
-            <S.TitleDis>{this.props.title}</S.TitleDis> <Logo />{" "}
-          </S.Header>{" "}
-          <S.Info>{this.props.info}</S.Info>{" "}
-          <Button lg text={this.props.btnText} handleClick={this.handleClick} />
+        <S.Header>
+          <S.TitleDis>{this.props.title}</S.TitleDis> <Logo />{" "}
+        </S.Header>{" "}
+        <S.Info>{this.props.info}</S.Info>{" "}
+        <Button
+          lg
+          text={this.props.btnText}
+          handleClick={this.handleClick}
+          disable
+        />
       </S.CardWrapper>
     );
   }

@@ -43,4 +43,22 @@ const BtnLG = styled.div`
   }
 `;
 
-export { Btn, BtnLG };
+const BtnLGDis = styled.div`
+  color: #ffffff;
+  text-align: center;
+  font-weight: 800;
+  font-size: 26px;
+  background-color: #c4c4c4;
+  width: fit-content;
+  min-width: 224px;
+  height: 70px;
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0;
+  pointer-events: none;
+`;
+
+export { Btn, BtnLG, BtnLGDis };
